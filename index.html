@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Allied Labs Smart QR</title>
+<style>
+:root{--red:#e5232b;--dark:#14202b;--muted:#66717c}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(145deg,#f7f9fc,#eef2f6);color:var(--dark)}
+.wrap{min-height:100vh;padding:18px 12px;display:flex;justify-content:center}
+.card{width:100%;max-width:440px;overflow:hidden;border-radius:30px;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);box-shadow:0 24px 70px rgba(20,32,43,.16);border:1px solid rgba(255,255,255,.8)}
+.hero{position:relative;padding:22px 20px 25px;background:linear-gradient(135deg,#fff,#f8fafc);overflow:hidden}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px)}
+.hero:before{width:180px;height:180px;background:rgba(229,35,43,.10);right:-70px;top:-70px}.hero:after{width:120px;height:120px;background:rgba(229,35,43,.07);left:-55px;bottom:-65px}
+.logo{position:relative;z-index:1;margin:0 auto 12px;width:240px;display:flex;align-items:center;justify-content:center;gap:10px}
+.logo-mark{width:58px;height:58px;border-radius:18px 18px 18px 7px;background:linear-gradient(145deg,#f02b35,#b90f18);box-shadow:8px 10px 18px rgba(185,15,24,.28),inset 2px 2px 5px rgba(255,255,255,.35);position:relative;transform:rotate(-7deg)}
+.logo-mark:before{content:"A";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:42px;font-weight:900;font-family:Arial,sans-serif;transform:rotate(7deg)}
+.logo-text{text-align:left;line-height:.95}.logo-text strong{display:block;font-size:30px;letter-spacing:-1.2px;color:#14202b}.logo-text span{display:block;font-size:12px;letter-spacing:2px;color:#7b151b;font-weight:800;margin-top:5px}
+.kicker{text-align:center;font-size:11px;letter-spacing:3px;font-weight:800;color:#8b171d;text-transform:uppercase}
+h1{text-align:center;margin:7px 0 4px;font-size:28px;letter-spacing:-.7px}.sub{text-align:center;color:var(--muted);margin:0;font-size:14px}
+.scan{margin:18px 18px 2px;padding:12px 15px;border-radius:16px;background:linear-gradient(135deg,#fff,#f3f6f9);box-shadow:inset 0 1px 0 #fff,0 8px 20px rgba(20,32,43,.08);text-align:center;font-weight:700}
+.grid{padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.btn{appearance:none;-webkit-appearance:none;font:inherit;text-align:left;cursor:pointer;position:relative;min-height:142px;padding:18px 14px;text-decoration:none;color:var(--dark);border-radius:22px;background:linear-gradient(145deg,#fff,#edf1f5);box-shadow:8px 10px 20px rgba(20,32,43,.12),-5px -5px 12px rgba(255,255,255,.95);border:1px solid rgba(255,255,255,.9);display:flex;flex-direction:column;justify-content:space-between;transition:.18s}
+.btn:hover{transform:translateY(-3px);box-shadow:10px 15px 28px rgba(20,32,43,.16)}
+.icon{width:55px;height:55px;border-radius:17px;display:grid;place-items:center;font-size:28px;background:linear-gradient(145deg,#fff,#e7ebef);box-shadow:inset 2px 2px 5px rgba(255,255,255,.9),5px 7px 12px rgba(20,32,43,.13)}
+.title{font-size:15px;font-weight:800;margin-top:10px;line-height:1.15}.small{font-size:11px;color:var(--muted);margin-top:4px}
+.arrow{position:absolute;right:12px;bottom:12px;width:27px;height:27px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:#fff;font-weight:900;box-shadow:0 5px 10px rgba(229,35,43,.3)}
+.footer{padding:3px 20px 22px;text-align:center;color:#8a949d;font-size:11px}.brandline{height:4px;width:65px;margin:0 auto 10px;border-radius:20px;background:linear-gradient(90deg,#b81820,#e5232b,#f35b61)}
+@media(max-width:360px){.grid{gap:10px;padding:13px}.btn{min-height:132px}.hero{padding-left:14px;padding-right:14px}}
+</style>
+</head>
+<body>
+<div class="wrap"><main class="card">
+<section class="hero">
+<div class="logo" aria-label="Allied Labs Pvt. Ltd."><div class="logo-mark"></div><div class="logo-text"><strong>Allied Labs</strong><span>PVT. LTD.</span></div></div>
+<div class="kicker">Smart Patient Access</div><h1>How can we help you?</h1><p class="sub">Quick access to Allied Labs services</p>
+</section>
+<div class="scan">✨ Scan once. Get everything in one place.</div>
+<section class="grid">
+<button class="btn" type="button" onclick="go('https://wa.me/923040000666?text=Assalam-o-Alaikum%2C%20I%20would%20like%20to%20book%20home%20sampling%20with%20Allied%20Labs.')"><div class="icon">🏠</div><div><div class="title">Book Home Sampling</div><div class="small">We come to you</div></div><span class="arrow">›</span></button>
+<button class="btn" type="button" onclick="go('https://alliedlabs.pk/pathology/')"><div class="icon">🧪</div><div><div class="title">Tests &amp; Services</div><div class="small">Explore services</div></div><span class="arrow">›</span></button>
+<button class="btn" type="button" onclick="go('https://alliedlabs.pk/our-packages/')"><div class="icon">🩺</div><div><div class="title">Health Packages</div><div class="small">Explore packages</div></div><span class="arrow">›</span></button>
+<button class="btn" type="button" onclick="go('https://wa.me/923040000666')"><div class="icon">💬</div><div><div class="title">WhatsApp Us</div><div class="small">Chat instantly</div></div><span class="arrow">›</span></button>
+<button class="btn" type="button" onclick="go('https://www.google.com/maps/search/?api=1&query=Allied%20Labs%20Pvt%20Ltd%20Lahore')"><div class="icon">📍</div><div><div class="title">Find a Branch</div><div class="small">Find your nearest branch</div></div><span class="arrow">›</span></button>
+<button class="btn" type="button" onclick="go('https://wa.me/923040000666?text=Assalam-o-Alaikum%2C%20I%20would%20like%20to%20share%20feedback%20about%20Allied%20Labs.')"><div class="icon">⭐</div><div><div class="title">Give Feedback</div><div class="small">Your opinion matters</div></div><span class="arrow">›</span></button>
+</section>
+<footer class="footer"><div class="brandline"></div>ALLIED LABS • DIAGNOSTICS • HEALTH • CARE</footer>
+</main></div>
+<script>function go(url){window.location.href=url}</script>
+</body></html>
