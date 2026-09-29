@@ -7,7 +7,27 @@
 <style>
 :root{--red:#e5232b;--dark:#14202b;--muted:#66717c}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(145deg,#f7f9fc,#eef2f6);color:var(--dark)}
-.wrap{min-height:100vh;padding:18px 12px;display:flex;justify-content:center}
+.wrap{min-height:100vh;padding:18px 12px;display:flex;justify-content:center;animation:pageIn .7s cubic-bezier(.22,1,.36,1) both}
+@keyframes pageIn{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+.card{animation:cardIn .8s .05s cubic-bezier(.22,1,.36,1) both}
+@keyframes cardIn{from{opacity:0;transform:translateY(24px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+.hero:before{animation:orb1 7s ease-in-out infinite alternate}.hero:after{animation:orb2 8s ease-in-out infinite alternate}
+@keyframes orb1{to{transform:translate(-18px,16px) scale(1.12)}}@keyframes orb2{to{transform:translate(16px,-12px) scale(1.08)}}
+.official-logo{animation:logoFloat 3.8s ease-in-out infinite}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.scan{animation:scanPulse 2.8s ease-in-out infinite}
+@keyframes scanPulse{0%,100%{transform:scale(1);box-shadow:inset 0 1px 0 #fff,0 8px 20px rgba(20,32,43,.08)}50%{transform:scale(1.015);box-shadow:inset 0 1px 0 #fff,0 11px 26px rgba(229,35,43,.13)}}
+.grid .btn{opacity:0;animation:btnIn .55s cubic-bezier(.22,1,.36,1) forwards}
+.grid .btn:nth-child(1){animation-delay:.18s}.grid .btn:nth-child(2){animation-delay:.25s}.grid .btn:nth-child(3){animation-delay:.32s}.grid .btn:nth-child(4){animation-delay:.39s}.grid .btn:nth-child(5){animation-delay:.46s}.grid .btn:nth-child(6){animation-delay:.53s}
+@keyframes btnIn{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+.btn{transition:transform .22s cubic-bezier(.22,1,.36,1),box-shadow .22s ease}
+.btn:hover{transform:translateY(-6px) scale(1.015)}
+.btn:active{transform:translateY(-1px) scale(.985)}
+.btn:hover .icon{transform:rotate(-4deg) scale(1.06)}
+.icon{transition:transform .25s cubic-bezier(.22,1,.36,1)}
+.arrow{transition:transform .22s ease}.btn:hover .arrow{transform:translateX(3px)}
+.footer{animation:fadeUp .8s .65s both}@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
 .card{width:100%;max-width:440px;overflow:hidden;border-radius:30px;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);box-shadow:0 24px 70px rgba(20,32,43,.16);border:1px solid rgba(255,255,255,.8)}
 .hero{position:relative;padding:22px 20px 25px;background:linear-gradient(135deg,#fff,#f8fafc);overflow:hidden}
 .hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px)}
