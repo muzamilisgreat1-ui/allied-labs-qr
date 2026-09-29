@@ -8,7 +8,7 @@
 :root{--red:#e5232b;--dark:#14202b;--muted:#66717c}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--dark);background:linear-gradient(125deg,#f7fafc 0%,#eef3f7 38%,#fff7f7 68%,#eef4f8 100%);background-size:240% 240%;animation:bgFlow 18s ease-in-out infinite;overflow-x:hidden}body:before,body:after{content:"";position:fixed;width:260px;height:260px;border-radius:50%;pointer-events:none;filter:blur(55px);z-index:-1}body:before{left:-120px;top:12%;background:rgba(229,35,43,.10);animation:floatGlow1 11s ease-in-out infinite alternate}body:after{right:-130px;bottom:8%;background:rgba(229,35,43,.07);animation:floatGlow2 14s ease-in-out infinite alternate}@keyframes bgShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}@keyframes floatGlow1{to{transform:translate(90px,110px) scale(1.25)}}@keyframes floatGlow2{to{transform:translate(-100px,-80px) scale(1.18)}}
 body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--dark);background:#eef2f6}
-.wrap{position:relative;z-index:3;min-height:100vh;padding:20px;display:flex;justify-content:center;align-items:flex-start;animation:pageIn .7s cubic-bezier(.22,1,.36,1) both}
+.wrap{position:relative;z-index:3;min-height:100vh;padding:20px;display:flex;justify-content:center;align-items:flex-start;box-sizing:border-box;}animation:pageIn .7s cubic-bezier(.22,1,.36,1) both}
 @keyframes pageIn{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
 .card{animation:cardIn .8s .05s cubic-bezier(.22,1,.36,1) both}
 @keyframes cardIn{from{opacity:0;transform:translateY(24px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
@@ -149,4 +149,14 @@ body:after{animation:blobB 9s ease-in-out infinite alternate}
 <footer class="footer"><div class="brandline"></div>ALLIED LABS • DIAGNOSTICS • HEALTH • CARE</footer>
 </main></div>
 <script>function go(url){window.location.href=url}</script>
-<script>if("scrollRestoration" in history){history.scrollRestoration="manual"}window.addEventListener("load",()=>window.scrollTo({top:0,left:0,behavior:"instant"}));</script></body></html>
+<script>if("scrollRestoration" in history){history.scrollRestoration="manual"}window.addEventListener("load",()=>window.scrollTo({top:0,left:0,behavior:"instant"}));</script><script>
+(function(){
+  function top(){window.scrollTo(0,0);}
+  top();
+  setTimeout(top,100);
+  setTimeout(top,500);
+  setTimeout(top,1200);
+  setTimeout(top,2200);
+  setTimeout(top,3200);
+})();
+</script></body></html>
