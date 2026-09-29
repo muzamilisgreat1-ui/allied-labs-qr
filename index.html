@@ -6,7 +6,7 @@
 <title>Allied Labs Smart QR</title>
 <style>
 :root{--red:#e5232b;--dark:#14202b;--muted:#66717c}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(145deg,#f7f9fc,#eef2f6);color:var(--dark)}
+*{box-sizing:border-box}body{position:relative;overflow-x:hidden;background:linear-gradient(125deg,#f7f9fc,#eef2f6,#fafbfc,#eef2f6);background-size:300% 300%;animation:bgShift 16s ease-in-out infinite}body:before,body:after{content:"";position:fixed;width:260px;height:260px;border-radius:50%;pointer-events:none;filter:blur(55px);z-index:-1}body:before{left:-120px;top:12%;background:rgba(229,35,43,.10);animation:floatGlow1 11s ease-in-out infinite alternate}body:after{right:-130px;bottom:8%;background:rgba(229,35,43,.07);animation:floatGlow2 14s ease-in-out infinite alternate}@keyframes bgShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}@keyframes floatGlow1{to{transform:translate(90px,110px) scale(1.25)}}@keyframes floatGlow2{to{transform:translate(-100px,-80px) scale(1.18)}}margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(145deg,#f7f9fc,#eef2f6);color:var(--dark)}
 .wrap{min-height:100vh;padding:18px 12px;display:flex;justify-content:center;animation:pageIn .7s cubic-bezier(.22,1,.36,1) both}
 @keyframes pageIn{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
 .card{animation:cardIn .8s .05s cubic-bezier(.22,1,.36,1) both}
